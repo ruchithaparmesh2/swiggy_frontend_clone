@@ -1,0 +1,32 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto max-w-3xl">
+  <div *ngFor="let item of favoriteItems" class="bg-white shadow-lg rounded-lg overflow-hidden my-4">
+    <!-- Image Section -->
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center">
+      <img *ngIf="item.image" [src]="item.image" alt="{{ item.title }}" class="w-full h-full object-cover" />
+      <span *ngIf="!item.image" class="text-gray-500 text-xl">No Image</span>
+    </div>
+
+    <!-- Content Section -->
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-gray-800 truncate">{{ item.title }}</h3>
+      <p class="text-sm text-gray-600">Price: ₹{{ item.price }}</p>
+
+      <!-- Buy Now and Delete Button Side by Side -->
+      <div class="flex space-x-2 mt-3">
+        <!-- Buy Now Button -->
+        <button class="flex-1 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors duration-200">
+          Buy Now
+        </button>
+
+        <!-- Delete (Dustbin Icon) Button -->
+        <button 
+          class="bg-red-500 text-white p-2 rounded-lg hover:bg-red-600 transition-colors duration-200"
+          (click)="deleteItem(item.id)"
+          aria-label="Delete"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

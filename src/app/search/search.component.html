@@ -1,0 +1,53 @@
+<section class="bg-[#FF5200] p-8 text-center text-white">
+  <!-- Main Heading -->
+  <h1 class="text-4xl font-bold mb-4">Order food & groceries. Discover best restaurants. Swiggy it!</h1>
+
+  <!-- Input Fields -->
+  <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 mb-8 pt-4">
+    <!-- Location Input -->
+    <div class="flex items-center bg-white text-gray-500 rounded-lg px-4 py-2 w-72">
+      <img src="https://st2.depositphotos.com/5266903/8456/v/950/depositphotos_84568698-stock-illustration-map-marker-flat-orange-color.jpg" class="h-5 w-5" alt="">
+      <input type="text" placeholder="Enter your delivery location" class="flex-1 outline-none pl-2">
+    </div>
+
+    <!-- Search Input with Suggestions -->
+    <div class="relative flex items-center bg-white text-gray-500 rounded-lg px-4 py-2 w-80">
+      <input
+        type="text"
+        [(ngModel)]="searchQuery"
+        (input)="onSearchInputChange()"
+        (keydown.enter)="navigateToItem()"
+        placeholder="Search for restaurant, item or more"
+        class="flex-1 outline-none pl-2"
+      >
+      <img src="https://tse4.mm.bing.net/th?id=OIP.rsZB5iKwX6totSXcV94swQHaHN&pid=Api&P=0&h=180" class="h-5 w-5" alt="">
+
+      <!-- Suggestions Dropdown -->
+      <ul *ngIf="filteredItems.length > 0" class="absolute top-full left-0 right-0 bg-white text-gray-700 mt-1 rounded-lg shadow-lg">
+        <li
+          *ngFor="let item of filteredItems"
+          (click)="searchQuery = item; navigateToItem()"
+          class="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+        >
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Service Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mx-10 w-30">
+    <a href="#" class="bg-white rounded-lg p-6 text-gray-800 block">
+      <img src="food.jpg" alt="Food Delivery">
+    </a>
+    <a href="#" class="bg-white rounded-lg p-6 text-gray-800 block">
+      <img src="instamart.jpg" alt="Instamart">
+    </a>
+    <a href="#" class="bg-white rounded-lg p-6 text-gray-800 block">
+      <img src="dineout.jpg" alt="Dineout">
+    </a>
+    <a href="#" class="bg-white rounded-lg p-6 text-gray-800 block">
+      <img src="ginie.jpg" alt="Genie">
+    </a>
+  </div>
+</section>

@@ -1,0 +1,160 @@
+<!-- Navbar Section -->
+<div class="flex items-center justify-between space-evenly shadow-md bg-white space-y-6">
+    <!-- Logo and Location -->
+    <div class="flex items-center space-x-4 pl-10 ml-10">
+      <a href="#" class=" pr-7">
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_800,h_800/portal/m/logo_192x192.png" alt="Swiggy Logo" class="h-10 w-10">
+      </a>
+      <div class="flex flex-wrap">
+        <a href="../home/home.component.html" class="font-semibold pt-2 underline hover:text-orange-500">L. B. Nagar</a>
+        <p class="text-sm text-gray-500 pt-3 pl-2">Chevella, 501503, Chandrapuri ...</p>
+      </div>
+    </div>
+    
+    <!-- Menu Items -->
+    <div class="flex items-center space-x-10 text-gray-700 pr-20 pb-4">
+      <a href="https://www.swiggy.com/corporate/" class="flex items-center space-x-1 hover:text-orange-500">
+        <span class="material-icons text-lg">business_center</span>
+        <p class="pl-10px">Swiggy Corporate</p>
+      </a>
+      <a href="../home/home.component.html" class="flex items-center space-x-1 hover:text-orange-500">
+        <span class="material-icons text-lg">search</span>
+        <p>Search</p>
+      </a>
+      <a href="#" class="flex items-center space-x-1 relative hover:text-orange-500">
+        <span class="material-icons text-lg">local_offer</span>
+        <p>Offers</p>
+        <span class="text-xs font-bold text-orange-500 absolute -top-1 -right-4">NEW</span>
+      </a>
+      <a href="https://www.swiggy.com/support" class="flex items-center space-x-1 hover:text-orange-500">
+        <span class="material-icons text-lg">help_outline</span>
+        <p>Help</p>
+      </a>
+      
+      <a [routerLink]="'/favorite'" class="flex items-center space-x-1 hover:text-orange-500">
+        <span><img src="https://cdn-icons-png.flaticon.com/256/1077/1077035.png" class="h-4 w-4" alt=""></span>
+        <p>Favorite</p>
+      </a>
+      <a href="cart" class="flex items-center space-x-1 hover:text-orange-500">
+        <span class="material-icons text-lg">shopping_cart</span>
+        <p>Cart</p>
+      </a>
+      <a href="#" class="flex items-center space-x-1 hover:text-orange-500">
+        <span class="material-icons text-lg">account_circle</span>
+        <p>Ruchi</p>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Restaurant Title Part -->
+  <div class="p-6 max-w-3xl mx-auto">
+    <!-- Breadcrumb -->
+    <div class="text-sm text-gray-500 flex items-center space-x-1">
+      <a href="#" class="hover:underline">Home</a>
+      <span>/</span>
+      <a href="#" class="hover:underline">Hyderabad</a>
+      <span>/</span>
+      <span>SHOYU</span>
+    </div>
+  
+    <!-- Restaurant Title -->
+    <h1 class="text-3xl font-bold mt-4 pb-5">SHOYU</h1>
+  
+    <!-- Restaurant Info -->
+    <div class="bg-white p-6 max-w-3xl mx-auto mt-4 rounded-2xl border border-gray-300 pt-2 rounder-full" style="box-shadow: 20px 30px 30px rgba(1, 1, 0, 0.2);">
+      <div class="flex items-center mt-2 space-x-4">
+        <div class="flex items-center text-green-500 font-semibold">
+          <span class="material-icons text-lg">star</span>
+          <span class="ml-1">4.1 (97K+ ratings)</span>
+        </div>
+        <span class="text-gray-500">•</span>
+        <p class="text-lg font-medium">₹400 for two</p>
+      </div>
+  
+      <!-- Tags and Outlet Info -->
+      <div class="mt-2 flex items-center text-sm text-red-600">
+        <a href="#" class="hover:underline">Noodles , Pasta </a>
+      </div>
+  
+      <div class="flex items-center mt-2 text-gray-600">
+        <div class="flex items-center space-x-1">
+          <span class="material-icons text-lg">location_on</span>
+          <span class="font-semibold pr-2">Outlet</span>
+          <a class="text-black underline" href="../home/home.component.html">Kothapet</a>
+          <span class="material-icons text-lg cursor-pointer">expand_more</span>
+        </div>
+        <span class="text-gray-500 ml-4">15-20 mins</span>
+      </div>
+  
+      <!-- Free Delivery Info -->
+      <div class="mt-4 bg-red-100 text-red-600 text-sm font-semibold p-2 rounded-lg shadow">
+        Free delivery on orders above ₹199
+      </div>
+    </div>
+  
+    <!-- Deals for You -->
+    <h2 class="text-xl font-semibold mt-6 pt-10">Deals for you</h2>
+    <div class="flex space-x-4 mt-4">
+      <!-- Offer Card 1 -->
+      <div class="bg-gray-100 p-4 rounded-lg shadow-md w-1/2 flex flex-wrap items-center border border-gray-300">
+        <div class="bg-orange-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">%</div>
+        <div>
+          <p class="font-semibold text-center mt-2">Flat ₹125 Off</p>
+          <p class="text-xs text-gray-600 mt-1 pl-2">USE WELCOMEBACK125</p>
+        </div>
+      </div>
+  
+      <!-- Offer Card 2 -->
+      <div class="bg-gray-100 p-4 rounded-lg shadow-md w-1/2 flex flex-wrap items-center border border border-gray-300">
+        <div class="bg-orange-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">%</div>
+        <div>
+          <p class="font-semibold text-center mt-2 pl-3">50% Off Upto ₹90</p>
+          <p class="text-xs text-gray-600 mt-1 pl-3">USE TRYNEW</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Menu Button -->
+    <div class="fixed bottom-8 right-8 flex items-center justify-center bg-black text-white rounded-full w-16 h-16">
+      <button class="font-bold">MENU</button>
+    </div>
+  </div>
+  
+  <!-- Top Picks Section -->
+  <div class="flex flex-wrap justify-center gap-7 pt-10 pl-10 pr-10 pb-10 mb-10">
+    <div *ngFor="let item of items" class="w-64 bg-gray-900 text-white rounded-lg overflow-hidden shadow-md">
+      <!-- Image Section -->
+      <div class="relative">
+        <img [src]="item.image" alt="{{ item.title }}" class="w-full h-48 object-cover">
+      </div>
+      <!-- Card Content -->
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">{{ item.title }}</h2>
+        <p class="text-sm text-gray-400 mt-1">Description for {{ item.title }}</p>
+        <!-- Price and Buttons Section -->
+        <div class="flex justify-between items-center mt-4">
+          <span class="text-lg font-semibold">₹{{ item.price }}</span>
+          <div class="flex space-x-2">
+            <!-- Add/Tick Button -->
+            <button
+              class="bg-white text-green-600 font-semibold px-4 py-1 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out"
+              [ngClass]="item.isAdded ? 'bg-white text-white' : 'bg-white text-green-600'"
+              (click)="addToCart(item)"
+            >
+              <span *ngIf="!item.isAdded">ADD</span>
+              <span *ngIf="item.isAdded">✔</span> <!-- Shows tick mark when added -->
+            </button>
+            <!-- Favorite Button -->
+            <button
+              class="bg-white text-red-500 p-2 rounded-lg hover:bg-gray-700"
+              (click)="addToFavorites(item)"
+            >
+              <span *ngIf="!item.isFavorited">❤️</span>
+              <span *ngIf="item.isFavorited">💔</span> <!-- Changes to broken heart when favorited -->
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

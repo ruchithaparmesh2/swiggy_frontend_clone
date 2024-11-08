@@ -1,0 +1,14 @@
+<h3 class="pl-10 pr-10 justify-center text-2xl pt-10 text-bold">Order our best food Options</h3>
+<div class="flex flex-wrap justify-center gap-6 
+pt-10">
+
+    <ng-container *ngFor="let item of foodItems">
+      <div class="w-24 text-center cursor-pointer" (click)="navigateTo(item.route)">
+        <img [src]="item.image" [alt]="item.name" class="rounded-full w-full h-auto mb-2 hover:scale-105 transition-transform duration-300" />
+        <p class="text-sm font-semibold">{{ item.name }}</p>
+      </div>
+    </ng-container>
+    
+    </div>
+  
+  
